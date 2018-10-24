@@ -1,13 +1,16 @@
 package com.example.yulechave.proyectoanotaciones;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 public class Anotacion {
 
     private String titulo;
-    private String fecha;
+    private LocalDate fecha;
     private String anotacion;
 
 
-    public Anotacion(String titulo, String fecha, String anotacion) {
+    public Anotacion(String titulo, LocalDate fecha, String anotacion) {
         this.titulo = titulo;
         this.fecha = fecha;
         this.anotacion = anotacion;
@@ -21,11 +24,11 @@ public class Anotacion {
         this.titulo = titulo;
     }
 
-    public String getFecha() {
+    public LocalDate getFecha() {
         return fecha;
     }
 
-    public void setFecha(String fecha) {
+    public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
 
