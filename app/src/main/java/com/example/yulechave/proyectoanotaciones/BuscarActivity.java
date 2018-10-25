@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
-import static com.example.yulechave.proyectoanotaciones.MainActivity.blocnotas;
+import static com.example.yulechave.proyectoanotaciones.MainActivity.blocnota;
 
 public class BuscarActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -22,9 +22,9 @@ public class BuscarActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buscar);
         txtTitulo=findViewById(R.id.txtTituloAgregar);
-        txtFecha=findViewById(R.id.txtFecha);
+        txtFecha=findViewById(R.id.txtFechaeliminar);
         txtMes=findViewById(R.id.txtMes);
-        btnBuscar=findViewById(R.id.btnBuscar);
+        btnBuscar=findViewById(R.id.btnBuscarEliminar);
         btnBuscar.setOnClickListener(this);
         if (txtTitulo.isFocused()){
             txtTitulo.setEnabled(true);
@@ -48,11 +48,11 @@ public class BuscarActivity extends AppCompatActivity implements View.OnClickLis
         ArrayList<Anotacion> anotMes = new ArrayList<Anotacion>();
         if(v==btnBuscar){
             if(txtTitulo.isEnabled()){
-                a=blocnotas.Buscar(txtTitulo.getText().toString());
+                a=blocnota.Buscar(txtTitulo.getText().toString());
             }else if (txtFecha.isEnabled()) {
-                a=blocnotas.Buscar(LocalDate.parse(txtFecha.getText().toString(), formatter));
+                a=blocnota.Buscar(LocalDate.parse(txtFecha.getText().toString(), formatter));
             }else if (txtMes.isEnabled()){
-                anotMes=blocnotas.Buscar(Integer.parseInt(txtMes.getText().toString()));
+                anotMes=blocnota.Buscar(Integer.parseInt(txtMes.getText().toString()));
             }
         }
 

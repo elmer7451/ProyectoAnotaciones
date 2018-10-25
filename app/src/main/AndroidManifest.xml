@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".ModificarActivity" />
         <activity android:name=".AgregarActivity" />
-        <activity android:name=".BuscarActivity"></activity>
+        <activity android:name=".BuscarActivity" />
+        <activity android:name=".EliminarActivity"></activity>
     </application>
 
 </manifest>

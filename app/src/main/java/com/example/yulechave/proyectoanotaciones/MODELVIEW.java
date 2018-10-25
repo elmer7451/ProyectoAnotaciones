@@ -14,7 +14,7 @@ public class MODELVIEW {
 
     public Anotacion Buscar(String titulo){
         for(Anotacion a: blocnotas){
-            if(a.getTitulo().equals(titulo)){
+            if(a.getTitulo().toString().equals(titulo)){
                 return a;
             }
         }
@@ -28,6 +28,11 @@ public class MODELVIEW {
             }
         }
         return null;
+    }
+
+    public int Buscar(Anotacion a){
+        int i = blocnotas.indexOf(a);
+        return i;
     }
 
     public ArrayList<Anotacion> Buscar (int mes){
@@ -44,7 +49,13 @@ public class MODELVIEW {
         blocnotas.add(a);
     }
 
-    public void Modificar (String titulo){
+    public void Modificar (int pos, String anotacion, LocalDate fecha, String titulo){
+        blocnotas.get(pos).setAnotacion(anotacion);
+        blocnotas.get(pos).setFecha(fecha);
+        blocnotas.get(pos).setTitulo(titulo);
+    }
 
+    public void Eliminar (Anotacion a){
+        blocnotas.remove(a);
     }
 }

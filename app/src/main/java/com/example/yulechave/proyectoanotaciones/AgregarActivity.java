@@ -9,7 +9,7 @@ import android.widget.EditText;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-import static com.example.yulechave.proyectoanotaciones.MainActivity.blocnotas;
+import static com.example.yulechave.proyectoanotaciones.MainActivity.blocnota;
 
 public class AgregarActivity extends Activity implements View.OnClickListener {
 
@@ -32,7 +32,7 @@ public class AgregarActivity extends Activity implements View.OnClickListener {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         if(v==btnAgregar) {
             Anotacion a = new Anotacion(txtTitulo.getText().toString(), LocalDate.parse(txtFecha.getText().toString(),formatter),txtAnotacion.getText().toString());
-            blocnotas.Agregar(a);
+            blocnota.Agregar(a);
         }
     }
 }

@@ -9,13 +9,13 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static MODELVIEW blocnotas = new MODELVIEW();
+    public static MODELVIEW blocnota = new MODELVIEW();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        blocnotas = new MODELVIEW();
+        blocnota = new MODELVIEW();
     }
 
     @Override
@@ -32,8 +32,11 @@ public class MainActivity extends AppCompatActivity {
         }else if (item.getItemId()==R.id.modificar){
             Intent i = new Intent(this,ModificarActivity.class);
             startActivity(i);
-        }else if (item.getItemId()==R.id.buscar){
-            Intent i = new Intent(this,BuscarActivity.class);
+        }else if (item.getItemId()==R.id.buscar) {
+            Intent i = new Intent(this, BuscarActivity.class);
+            startActivity(i);
+        }else if (item.getItemId()==R.id.eliminar){
+            Intent i = new Intent(this, EliminarActivity.class);
             startActivity(i);
         }
         return super.onOptionsItemSelected(item);
