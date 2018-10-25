@@ -3,7 +3,6 @@ package com.example.yulechave.proyectoanotaciones;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class MODELVIEW {
 
@@ -31,13 +30,14 @@ public class MODELVIEW {
         return null;
     }
 
-    public Anotacion BuscarMes (int mes){
+    public ArrayList<Anotacion> Buscar (int mes){
+        ArrayList<Anotacion> anotMes = new ArrayList<Anotacion>();
         for (Anotacion a: blocnotas) {
             if(a.getFecha().getMonth().equals(Month.of(mes))){
-                return a;
+                anotMes.add(a);
             }
         }
-        return null;
+        return anotMes;
     }
 
     public void Agregar (Anotacion a){
