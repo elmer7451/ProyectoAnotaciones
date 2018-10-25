@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ModificarActivity" />
-        <activity android:name=".AgregarActivity"></activity>
+        <activity android:name=".AgregarActivity" />
+        <activity android:name=".BuscarActivity"></activity>
     </application>
 
 </manifest>

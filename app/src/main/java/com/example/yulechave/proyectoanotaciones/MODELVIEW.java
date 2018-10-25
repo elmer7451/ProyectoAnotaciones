@@ -10,6 +10,7 @@ public class MODELVIEW {
      private ArrayList<Anotacion> blocnotas;
 
     public MODELVIEW() {
+        blocnotas=new ArrayList<Anotacion>();
     }
 
     public Anotacion Buscar(String titulo){
